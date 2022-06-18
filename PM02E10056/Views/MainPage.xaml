@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:controls="clr-namespace:PM02E10056.Controls;assembly=PM02E10056"
+             x:Class="PM02E10056.Views.MainPage"
+                   BackgroundColor="#394BA7"
+    >
+
+    <ContentPage.ToolbarItems Orientation="Horizontal" VerticalOptions="center" >
+        <ToolbarItem Text="NUEVA UBICACION"
+                     Clicked="newUbicacion_Clicked"
+                     x:Name="newUbicacion"
+                     >
+
+        </ToolbarItem>
+
+        <ToolbarItem Text="Agregar Empleado"
+                   IconImageSource="logoUth"
+                     x:Name="toolbar0">
+
+        </ToolbarItem>
+
+        <ToolbarItem Text="UBICACIONES SALVADAS"
+                     Clicked="ubicacionesSave_Clicked"
+                     x:Name="ubicacionesSave">
+
+        </ToolbarItem>
+        <ToolbarItem Text="Mapa"
+                     Clicked="mapa_Clicked"
+                     x:Name="mapa">
+
+        </ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="20" RowSpacing="15">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+
+
+
+        <Label
+            Grid.Row="0"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="Latitud actual"
+            TextColor="White" 
+           />
+
+        <controls:StandardEntry
+            Grid.Row="1"
+            Padding="13"
+            BackgroundColor="#31FFFFFF"
+            BorderColor="White"
+            BorderThickness="1"
+            CornerRadius="15"
+            Placeholder="Ingrese la latitud"
+            x:Name="txtLatitud"
+            PlaceholderColor="White"
+            TextColor="White"
+            Keyboard="Numeric"/>
+
+        <Label
+            Grid.Row="2"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="Longitud actual"
+            TextColor="White"  
+            />
+
+        <controls:StandardEntry
+            Grid.Row="3"
+            Padding="13"
+            BackgroundColor="#31FFFFFF"
+            BorderColor="White"
+            BorderThickness="1"
+            CornerRadius="8"
+            Placeholder="Ingrese su apellido"
+            x:Name="txtLongitud"
+            PlaceholderColor="White"
+            TextColor="White"
+            Keyboard="Numeric"/>
+
+        <Label
+            Grid.Row="4"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="Describa la ubicacion"
+            TextColor="White"  
+            />
+
+        <controls:StandardEntry
+            Grid.Row="5"
+            Padding="13"
+            BackgroundColor="#31FFFFFF"
+            BorderColor="White"
+            BorderThickness="1"
+            CornerRadius="8"
+            Placeholder="Describa la ubicacion"
+            x:Name="txtDescripcion"
+            PlaceholderColor="White"
+            TextColor="White"
+            Keyboard="Text"/>
+
+        <Label
+            Grid.Row="6"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="Descripcion corta"
+            TextColor="White"  
+          />
+
+        <controls:StandardEntry
+            Grid.Row="7"
+            Padding="13"
+            Margin="0,0,0,20"
+            BackgroundColor="#31FFFFFF"
+            BorderColor="White"
+            BorderThickness="1"
+            CornerRadius="8"
+            Placeholder="Ingrese descripcion corta"
+            x:Name="txtDescripcionCorta"
+            PlaceholderColor="White"
+            TextColor="White"
+            Keyboard="Text"/>
+
+
+
+        <Button 
+            Grid.Row="8"
+            BackgroundColor="White"
+            CornerRadius="8"
+            Text="Salvar Ubicacion"
+            TextColor="#4758AE"
+            TranslationY="-20" 
+            x:Name="btnAgregar"
+            Clicked="btnAgregar_Clicked"
+            />
+        <Button 
+            Grid.Row="9"
+            BackgroundColor="White"
+            CornerRadius="8"
+            Text="Ubicaciones salvadas"
+            TextColor="#4758AE"
+            TranslationY="-20" 
+            x:Name="btnVer"
+            Clicked="btnVer_Clicked"
+            />
+
+
+    </Grid>
+
+</ContentPage>
+

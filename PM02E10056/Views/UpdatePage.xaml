@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM02E10056.Views.UpdatePage"
+             xmlns:controls="clr-namespace:PM02E10056.Controls;assembly=PM02E10056"
+            BackgroundColor="#394BA7"
+             Title="Actualizar ubicacion">
+
+    <ContentPage.ToolbarItems>
+
+
+        <ToolbarItem Text="Agregar Empleado"
+                   IconImageSource="logoUth"
+                     x:Name="toolbar0"
+                     Priority="0"
+                     Order="Primary">
+
+        </ToolbarItem>
+
+        <ToolbarItem Text="Actualizar"
+                     
+                     x:Name="ToollBarActualizar"
+                     Priority="0"
+                     Order="Secondary"
+                     Clicked="ToollBarActualizar_Clicked"
+                     >
+
+        </ToolbarItem>
+        <ToolbarItem Text="Eliminar"
+                     
+                     x:Name="ToolBarEliminar"
+                     Priority="0"
+                     Order="Secondary"
+                     Clicked="ToolBarEliminar_Clicked"
+                     >
+
+        </ToolbarItem>
+        <ToolbarItem Text="Principal"
+                     x:Name="Principal"
+                     Priority="0"
+                     Order="Secondary"
+                     Clicked="Principal_Clicked"
+                     >
+
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="20" RowSpacing="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label
+            Grid.Row="0"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="Codigo"
+            TextColor="White" 
+            Margin="0,10,0,0"/>
+
+        <controls:StandardEntry
+            Grid.Row="1"
+            Padding="13"
+            BackgroundColor="#5e99d3"
+            BorderColor="White"
+            BorderThickness="1"
+            CornerRadius="8"
+            Placeholder=""
+            x:Name="txtId"
+            PlaceholderColor="White"
+            TextColor="White"
+            Keyboard="Text"
+            Text="{Binding codigo}"
+            IsReadOnly="true"/>
+
+        <Label
+            Grid.Row="2"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="Latitud"
+            TextColor="White" 
+           />
+
+        <controls:StandardEntry
+            Grid.Row="3"
+            Padding="13"
+            BackgroundColor="#5e99d3"
+            BorderColor="White"
+            BorderThickness="1"
+            CornerRadius="8"
+            Placeholder="Ingres una latitud"
+            x:Name="txtLatitud"
+            PlaceholderColor="White"
+            TextColor="White"
+            Keyboard="Numeric"
+            Text="{Binding Latitud}"/>
+
+        <Label
+            Grid.Row="4"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="Longitud"
+            TextColor="White"  
+            />
+
+        <controls:StandardEntry
+            Grid.Row="5"
+            Padding="13"
+            BackgroundColor="#5e99d3"
+            BorderColor="White"
+            BorderThickness="1"
+            CornerRadius="8"
+            Placeholder="Ingrese una longitud"
+            x:Name="txtLongitud"
+            PlaceholderColor="White"
+            TextColor="White"
+            Keyboard="Numeric"
+            Text="{Binding Longitud}"/>
+
+        <Label
+            Grid.Row="6"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="Descripcion"
+            TextColor="White"  
+           />
+
+        <controls:StandardEntry
+            Grid.Row="7"
+            Padding="13"
+            BackgroundColor="#5e99d3"
+            BorderColor="White"
+            BorderThickness="1"
+            CornerRadius="8"
+            Placeholder="Ingrese una ubicacion"
+            x:Name="txtDescripcion"
+            PlaceholderColor="White"
+            TextColor="White"
+            Keyboard="Text"
+            Text="{Binding Descripcion}"/>
+
+        <Label
+            Grid.Row="8"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="Descripcion corta"
+            TextColor="White"  
+            />
+
+        <controls:StandardEntry
+            Grid.Row="9"
+            Padding="13"
+            BackgroundColor="#5e99d3"
+            BorderColor="White"
+            BorderThickness="1"
+            CornerRadius="8"
+            Placeholder="Ingrese una descripcion corta"
+            x:Name="txtDescripcionCorta"
+            PlaceholderColor="White"
+            TextColor="White"
+            Keyboard="Text"
+            Text="{Binding DescripcionCorta}"
+        />
+
+       
+
+
+    </Grid>
+
+
+</ContentPage>

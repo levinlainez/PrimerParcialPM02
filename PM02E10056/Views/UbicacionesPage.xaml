@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM02E10056.Views.UbicacionesPage"
+               BackgroundColor="#394BA7"
+             Title="Ubicaciones Guardadas">
+    <ContentPage.ToolbarItems>
+
+
+        <ToolbarItem Text="Agregar Empleado"
+                   IconImageSource="logoUth"
+                     x:Name="toolbar0"
+                     Priority="0"
+                     Order="Primary">
+
+        </ToolbarItem>
+
+        <ToolbarItem Text="Eliminar"
+                     
+                     x:Name="Actualizar"
+                     Priority="0"
+                     Order="Secondary"
+                     Clicked="Actualizar_Clicked"
+                     >
+
+        </ToolbarItem>
+
+        <ToolbarItem Text="Ir al Mapa"
+                     
+                     x:Name="Mapa"
+                     Priority="0"
+                     Order="Secondary"
+                     Clicked="Mapa_Clicked_1"
+                     >
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="lsUbicacion" Margin="30,10,30,10" ItemTapped="lsUbicacion_ItemTapped">
+        <ListView.ItemTemplate >
+            <DataTemplate>
+                <ViewCell>
+                    <Grid Padding="5" RowSpacing="15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding Latitud}" Grid.Row="0" Grid.Column="2" TextColor="White"/>
+                        <Label Text="{Binding Descripcion}" Grid.Row="0" Grid.Column="0" TextColor="White"/>
+                        <Label Text="{Binding DescripcionCorta}" Grid.Row="0" Grid.Column="1" TextColor="White"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+
+
+</ContentPage>
